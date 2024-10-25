@@ -1,17 +1,16 @@
-# A basic example of a secure login system
 
-# A sample user database (in a real-world scenario, this would be a secured database)
+# sample user database (in a real-world scenario, this would be a secured database)
 user_database = {
     "admin": "password123"  # In a real application, never store plain-text passwords
 }
 
-# Function to hash a password (demonstrates hashing concept)
+# Function to hash a password 
 import hashlib
 
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
-# Hash the password and update the database (simulating secure storage)
+# Hash the password and update the database - simulating secure storage
 user_database["admin"] = hash_password(user_database["admin"])
 
 # Login function with basic input sanitization
@@ -29,7 +28,7 @@ def login(username, password):
     else:
         print("Username not found.")
 
-# Basic script to demonstrate functionality
+# Basic user interaction with system
 def main():
     print("Welcome to the Secure System")
     username = input("Enter your username: ")
